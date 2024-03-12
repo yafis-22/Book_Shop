@@ -7,6 +7,7 @@
 
   let books = [];
   let searchQuery = "";
+  let searchFields = "title,author";
   let currentPage = 1;
   let totalPages = 1;
   let sortField = "";
@@ -30,8 +31,9 @@
 
   const fetchBooks = async () => {
   try {
+    const encodedSearchFields = encodeURIComponent(searchFields);
     const response = await fetch(
-      `http://localhost:3002/api/v1/books?page=${currentPage}&pageSize=12&search=${searchQuery}&sortField=${sortField}&sortOrder=${sortOrder}`,
+      `http://localhost:3002/api/v1/books?page=${currentPage}&pageSize=12&search=${searchQuery}&searchFields=${encodedSearchFields}&sortField=${sortField}&sortOrder=${sortOrder}`,
       {
         method: "GET",
         headers: {
@@ -164,7 +166,7 @@
           type="text"
           class="form-control"
           bind:value={searchQuery}
-          placeholder="Search by title, author, category..."
+          placeholder="Search by title, author..."
         />
         <div class="input-group-append">
           <button class="btn btn-outline-secondary" type="button" on:click={handleSearch}>Search</button>
