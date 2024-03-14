@@ -133,14 +133,14 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col" on:click={() => handleSort("id")}>Id</th>
-                    <th scope="col" on:click={() => handleSort("username")}>Username</th>
-                    <th scope="col" on:click={() => handleSort("email")}>Email</th>
-                    <th scope="col" on:click={() => handleSort("phoneNumber")}>Phone Number</th>
-                    <th scope="col" on:click={() => handleSort("address")}>Address</th>
-                    <th scope="col" on:click={() => handleSort("createdAt")}>Created At</th>
-                    <th scope="col" on:click={() => handleSort("updatedAt")}>Updated At</th>
-                    <th scope="col" on:click={() => handleSort("deletedAt")}>Deleted At</th>
+                    <th scope="col" on:click={() => handleSort()}>Id</th>
+                    <th scope="col" on:click={() => handleSort()}>Username</th>
+                    <th scope="col" on:click={() => handleSort()}>Email</th>
+                    <th scope="col" on:click={() => handleSort()}>Phone Number</th>
+                    <th scope="col" on:click={() => handleSort()}>Address</th>
+                    <th scope="col" on:click={() => handleSort()}>Created At</th>
+                    <th scope="col" on:click={() => handleSort()}>Updated At</th>
+                    <th scope="col" on:click={() => handleSort()}>Deleted At</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
