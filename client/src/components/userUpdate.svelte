@@ -12,7 +12,7 @@
 
   const updateProfile = async () => {
     try {
-        const { username, password, ...updatedUserWithoutUsername } = updatedUser;
+        const { username, ...updatedUserWithoutUsername } = updatedUser;
       const response = await fetch('http://localhost:3002/api/v1/users/me', {
         method: 'PATCH',
         headers: {
@@ -26,7 +26,7 @@
         const data = await response.json();
         console.log('User details updated successfully:', data);
         // Notify the parent component about the update
-    onUpdate(updatedUser);
+    onUpdate();
       } else {
         const errorData = await response.json();
         console.error('Error updating user profile:', errorData.message);
@@ -58,6 +58,11 @@
           <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" bind:value={updatedUser.email} />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" bind:value={updatedUser.password} />
           </div>
 
           <div class="mb-3">
