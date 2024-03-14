@@ -58,7 +58,7 @@
         {errorMessage}
       </div>
     {/if}
-  
+  <div class="card">
     <form>
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
@@ -103,15 +103,21 @@
       <button type="button" class="btn btn-primary" on:click={addBook}>Add Book</button>
     </form>
   </div>
+  </div>
   
   <style>
     .container {
       max-width: 600px;
       background-color: #f5f5f5;
     }
+
+    input, textarea, select {
+      background-color: #f5f5f5;
+    }
   
     form {
       margin-top: 20px;
+      padding: 20px;
     }
   
     .mb-3 {
@@ -131,5 +137,4 @@
       margin-top: 20px;
     }
   </style>
-  
   
