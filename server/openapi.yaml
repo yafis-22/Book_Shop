@@ -196,6 +196,7 @@ paths:
         - name: search
           in: query
           description: Search term to filter books by title, author, or category
+          allowReserved: true
           schema:
             type: string
           allowEmptyValue: true
