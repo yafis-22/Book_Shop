@@ -3,8 +3,8 @@
   import BookCard from './bookCard.svelte';
   import Header from './header.svelte';
   import Footer from './footer.svelte';
-  import Pagination from './Pagination.svelte';
-  import Sorting from './Sorting.svelte';
+  import Pagination from './pagination.svelte';
+  import Sorting from './sorting.svelte';
 
   export let category;
 
