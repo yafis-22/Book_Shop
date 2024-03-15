@@ -2,7 +2,6 @@
     import { navigate } from "svelte-routing";
     import Header from "./header.svelte";
     import Footer from "./footer.svelte";
-    import "bootstrap/dist/css/bootstrap.min.css";
 
     let formData = {
         username: '',
@@ -37,7 +36,7 @@
             }
         } catch (error) {
             console.error('Error registering user:', error);
-            res.status(500).send('Internal Server Error');
+            errorMessage = 'Internal Server Error';
         }
     };
 </script>
